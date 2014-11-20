@@ -1,0 +1,65 @@
+#pagenavi{
+	padding: 20px 0;
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+
+	// @include border-shadow();
+	a{
+		&:hover{
+			// text-decoration: underline;
+			@include transition(color 0.3s);
+		}
+	}
+	.prev, .next{
+		position: absolute;
+	}
+
+	.prev{
+		padding-left: 20px;
+
+		@media screen and (max-width: 800px){
+		margin-left: 20px;		
+		}
+		@media screen and (max-width: 600px){
+		margin-left: 20px;
+		}
+
+		left: 0;
+		&:before{
+			padding-top:4px;
+			content: "\f060";
+			font: 0.8em $font-icon;
+			position: absolute;
+			left: 0;
+		}
+	}
+	.next{
+		padding-right: 20px;
+
+		@media screen and (max-width: 800px){
+		margin-right: 20px;
+		
+		}
+		@media screen and (max-width: 600px){
+		margin-right: 20px;
+		}
+
+		right: 0;
+		&:before{
+			padding-top:4px;
+			content: "\f061";
+			font: 0.8em $font-icon;
+			position: absolute;
+			right: 0;
+		}
+	}
+	.center{
+		text-align: center;
+		width: 100%;
+		display: block;
+		// @media screen and (max-width: 400px){
+		// 	display: none;
+		// }
+	}
+}

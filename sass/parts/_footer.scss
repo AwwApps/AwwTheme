@@ -1,0 +1,65 @@
+
+/* Responsive Breakpoints */
+$mobile: 480px;
+$tablet: 768px;
+
+
+@mixin textSize($size) {
+	/* Default Screen*/
+	font-size: $size;
+	padding-bottom: 0.3em;
+	text-align: center;
+
+	@media screen and (max-width: $mobile) {
+		font-size: $size * (2/3);
+	}
+	@media screen and (max-width: $tablet) {
+		font-size: $size * (3/4);
+	}
+}
+
+.in {
+	$sideWidth: 70%;
+    @include centerWithWidth($sideWidth);
+    max-width: 600px;
+}
+
+#footer{
+
+	font-weight: 300;
+	width: auto;
+	
+	$backgroundColor: #4E5EDE;
+	$textColor: lighten($backgroundColor, 20%);
+	$linkColor: lighten($backgroundColor, 10%);
+	$horizontalPadding: 1.5%;
+	@include styleSection($backgroundColor, $textColor, $horizontalPadding, $linkColor);
+
+	img {
+		@include centerWithWidth(10%);
+		padding: 3% 0;
+	}
+
+	ul {
+		list-style: none;
+		@include centerWithWidth(100%);
+		text-align: center;
+	}
+	li {
+		a {
+			color: $textColor;
+			font-size:21px;
+			font-weight:300;
+		}
+
+
+		margin: 0 1%;
+		display: inline;
+	}
+
+	.small {
+		@include textSize(12pt);
+		padding-bottom: 0;
+	}
+
+}

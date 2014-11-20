@@ -1,0 +1,17 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+
+<body>
+	<header id="header">{% include header.html %}</header>
+	{% unless page.banner == false %}
+		{% include banner.html %}
+	{% endunless %}
+	<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
+	<div id="authors">
+	{%img /images/Bernd_01@2x.png 80 %}
+	{%img /images/Judith_01@2x.png 80 %}
+	</div>
+	<footer id="footer" class="inner">{% include footer.html %}</footer>
+	{% include after_footer.html %}
+</body>
+</html>

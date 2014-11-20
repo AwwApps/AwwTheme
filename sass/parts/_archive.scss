@@ -1,0 +1,76 @@
+.archives{
+	h2 {
+		text-align: left;
+	}
+	position: relative;
+	&:last-of-type{
+		&:before{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 200px;
+			// border-top: 1px solid $color-gray04;
+		}
+	}
+	.year{
+		line-height: 35px;
+		width: 200px;
+		position: absolute;
+		top: 0;
+		padding-top: 15px;
+		// border-top: 1px solid #fff;
+		&:before{
+			content: "";
+			position: absolute;
+			top: -2px;
+			width: 100%;
+			// border-top: 1px solid $color-gray04;
+		}
+		@media screen and (max-width: 600px){
+			position: relative;
+			width: 100%;
+			margin-left: 30px;	
+			// font-weight: 100;
+		}
+	}
+	article{
+		margin-left: 200px;
+		padding: 15px 0;
+		@media screen and (max-width: 600px){
+			margin-left: 30px;
+			&:first-of-type{
+				border-top: none;
+				padding-top: 30px;
+			}
+		}
+		.title{
+			margin-bottom: 0;
+					a {
+				// color: $color-main;	
+				}
+
+		}
+		.meta{
+			display: inline;
+			line-height: 2;
+			font-size: 0.9em;
+			color: $color-gray02;
+			margin-top: 15px;
+			@media screen and (max-width: 600px){
+				display: none;
+			}
+			a{
+				@include link-colors($color-gray02, $color-gray01);
+				@include transition(0.3s);
+			}
+			.date, .tags, .comments{
+				display: inline;
+				position: relative;
+				@media screen and (max-width: 600px){
+					@include inline-block;
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+}

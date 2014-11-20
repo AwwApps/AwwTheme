@@ -1,0 +1,70 @@
+	.meta{
+		// position: absolute;
+		// top: 85px;
+		margin-top: 20px;
+		// line-height: 2;
+		// font-size: 0.9em;
+		color: $color-gray02;
+		// width: 170px;
+		@media screen and (max-width: 800px){
+			margin-top: 15px;
+			position: static;
+			width: auto;
+		}
+		a{
+			@include link-colors($color-gray02, $color-gray01);
+			@include transition(0.3s);
+		}
+
+			#bernd {
+				color:#34E0C2;
+			}
+			#judith {
+				color:#E66051;
+			}
+			#team {
+				color:#6874F4;
+			}
+
+		.date, .tags, .comments .author{
+
+			font-weight: 100;
+			
+			a {
+				color: $color-main;
+				&:hover{
+					@include transition(color 0.3s);
+					color: lighten( $color-main, 10% );
+				}
+			}
+
+			// padding-left: 30px;
+			// position: relative;
+			// &:before{
+			// 	color: $color-gray03;
+			// 	font: 1.3em $font-icon;
+			// 	line-height: 1.6em;
+			// 	position: absolute;
+			// 	left: 0;
+			// }
+			// @media screen and (max-width: 800px){
+			// 	@include inline-block;
+			// 	margin-right: 30px;
+			// }
+		}
+
+		.tags {
+			margin-left: 5px;
+		}
+		// .date:before{content: "\f073";}
+		// .tags:before{content: "\f02c";}
+		// .comments:before{content: "\f075";}
+	}
+.post{
+	h2.title, .entry-content{
+		// margin-left: 200px;
+		@media screen and (max-width: 800px){
+			margin-left: 0;
+		}
+	}
+}
